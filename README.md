@@ -11,10 +11,7 @@ class WeatherApp:
     def get_weather(self, city):
         """Fetch weather data for the given city."""
         params = {
-            "q": city,
-            "appid": self.api_key,
-            "units": "metric",
-            "lang": "en"
+    
         }
         try:
             response = requests.get(self.base_url, params=params, timeout=5)
